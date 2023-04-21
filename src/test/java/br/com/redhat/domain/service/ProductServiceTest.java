@@ -93,8 +93,8 @@ public class ProductServiceTest {
         assertEquals(5, page1.getNumberOfPages());
         assertEquals(5, page1.getResults().size());
 
-        PageResult<ProductResult> page4 = service.all(4, 5);
-        assertEquals(4, page4.getPage());
+        PageResult<ProductResult> page4 = service.all(5, 5);
+        assertEquals(5, page4.getPage());
         assertEquals(5, page4.getNumberOfPages());
         assertEquals(2, page4.getResults().size());
 
