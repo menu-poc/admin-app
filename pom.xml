@@ -183,6 +183,9 @@
   </build>
   <profiles>
     <profile>
+      <id>default</id>
+    </profile>
+    <profile>
       <id>native</id>
       <activation>
         <property>
