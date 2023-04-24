@@ -13,12 +13,15 @@ import br.com.redhat.infrastructure.entity.ProductEntity;
 import br.com.redhat.infrastructure.entity.RestaurantEntity;
 import br.com.redhat.infrastructure.startup.FakeData;
 import io.quarkus.test.TestTransaction;
+import io.quarkus.test.common.QuarkusTestResource;
+import io.quarkus.test.h2.H2DatabaseTestResource;
 import io.quarkus.test.junit.QuarkusTest;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 @QuarkusTest
 @TestTransaction
+@QuarkusTestResource(H2DatabaseTestResource.class)
 public class ProductRepositoryTest {
     
     private ProductEntityRepository repository;

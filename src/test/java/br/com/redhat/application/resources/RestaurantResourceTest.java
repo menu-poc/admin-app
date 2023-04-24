@@ -13,12 +13,15 @@ import org.junit.jupiter.api.Test;
 import br.com.redhat.domain.model.restaurant.Restaurant;
 import br.com.redhat.domain.service.RestaurantService;
 import br.com.redhat.infrastructure.startup.FakeData;
+import io.quarkus.test.common.QuarkusTestResource;
+import io.quarkus.test.h2.H2DatabaseTestResource;
 import io.quarkus.test.junit.QuarkusTest;
 import io.quarkus.test.junit.mockito.InjectMock;
 import lombok.AllArgsConstructor;
 
 @QuarkusTest
 @AllArgsConstructor
+@QuarkusTestResource(H2DatabaseTestResource.class)
 public class RestaurantResourceTest {
 
     @InjectMock
